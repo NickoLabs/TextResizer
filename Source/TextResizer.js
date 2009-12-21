@@ -1,16 +1,19 @@
 /*
 ---
 script: TextResizer.js
-version: 1.0
-description: A Class that provide quick Text resizing tool for elements.
+
+description: TextResizer class
+
 license: MIT-style
+
 authors: 
-- Nickolas Simard
+- Nickolas Simard (http://blog.nickolabs.com/)
 
 requires: 
-  core:1.2.4: '*'
+  core/1.2.4: '*'
 
-provides: [TextResizer]
+provides: 
+- TextResizer
 ...
 */
 var TextResizer = new Class ({
