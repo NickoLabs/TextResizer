@@ -1,7 +1,6 @@
 TextResizer
 ===========
 
-
 How to Use
 ----------
 
