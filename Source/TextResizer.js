@@ -1,7 +1,17 @@
-/**
-*	TextResizer v 1.0
-*
-*	The goal of this Mootool class is to provide quick text resizer tool on website.
+/*
+---
+script: TextResizer.js
+version: 1.0
+description: A Class that provide quick Text resizing tool for elements.
+license: MIT-style
+authors: 
+- Nickolas Simard
+
+requires: 
+  core:1.2.4: '*'
+
+provides: [TextResizer]
+...
 */
 var TextResizer = new Class ({
 	// Implements
@@ -50,7 +60,9 @@ var TextResizer = new Class ({
 			var normal_size_hash = new Hash();
 			this.options.size_status = normal_size_hash.set('normal', this.sizes.get("normal"));
 		}
-		this.size_status = Cookie.read('size_status') || this.options.size_status;
+		var cookie_hash = new Hash();
+		cookie_hash.set(Cookie.read('size_status_key'), Cookie.read('size_status_value'));
+		this.size_status =  cookie_hash || this.options.size_status;
 		
 		// Set the starting size
 		this.setSize(this.size_status);
@@ -118,6 +130,7 @@ var TextResizer = new Class ({
 					{
 						// Redefined the size setting
 						selected_size_value = value;
+						selected_size_key = key;
 					}
 				}, this);
 				
@@ -125,11 +138,12 @@ var TextResizer = new Class ({
 				text_zone.setStyle('font-size', selected_size_value);
 			}, this);
 		}
-		/*this.setCookie(this.size_status);*/
+		this.setCookie(selected_size_key, selected_size_value);
 	},
 	
 	// setCookie to save the current settings
-	setCookie: function(size_status){
-		Cookie.write('size_status', size_status);
+	setCookie: function(key, value){
+		Cookie.write('size_status_key', key);
+		Cookie.write('size_status_value', value);
 	}
 });
