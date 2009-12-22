@@ -9,7 +9,7 @@ Installation
 ----------
 
 Simply add the script to your page, and use:
-	### Javascript
+### Javascript
 	window.addEvent('domready',function(){	
 		var text_resizer = new TextResizer();
 	});
@@ -20,7 +20,7 @@ Usage
 For an element to be recognized by the script, it has to contain the CSS class: "text-resize-me".
 Example: 
 
-	### HTML
+### HTML
 	<div id="news" class="text-resize-me">
 	  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 	</div>
@@ -33,7 +33,7 @@ There are few options that can be specified.
 The container for the tool can either be a div of your own choice or, by default, the document body itself.
 You can also specify the sizes available.
 
-	### Javascript
+### Javascript
 	var text_resizer = new TextResizer({
 		container: 'text_resizer_holder',
 		sizes: $H({normal: "15px",
