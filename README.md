@@ -14,7 +14,7 @@ Simply add the script to your page, and use:
 		var text_resizer = new TextResizer();
 	});
 
-Usage
+How to Use
 ----------
 
 For an element to be recognized by the script, it has to contain the CSS class: "text-resize-me".
