@@ -9,17 +9,15 @@ Installation
 ----------
 
 Simply add the script to your page, and use 
-#JS
-window.addEvent('domready',function(){	
-	var text_resizer = new TextResizer();
-});
+#JS	
+var text_resizer = new TextResizer();
 
 Usage
 ----------
 
 For an element to be recognized by the script, it has to contain the CSS class: "text-resize-me".
 Example: 
-#HTML
+#JS
 <div id="news" class="text-resize-me">
   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies luctus diam. Ut malesuada neque sit amet justo aliquet rhoncus. Cras magna metus, tincidunt a dictum a, molestie in tellus.</p>
 </div>
