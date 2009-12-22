@@ -25,7 +25,13 @@ var TextResizer = new Class ({
 		sizes: null,
 		container: null,
 		// Set the default Size status to normal for the moment
-		size_status: $H({normal: "12px"})
+		size_status: $H({normal: "12px"})/*,
+		buildController: $empty,
+		addSizeButton: $empty,
+		setSize: $empty,
+		onClick: $empty,
+		setCookie: $empty
+		*/
 	},
 	
 	// Initialization
